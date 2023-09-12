@@ -33,7 +33,7 @@ function EventsList() {
     <div>
     <CardGroup className="Events">
             {events.map(event =>
-            <EventCard key={event.id} title={event.title} location={event.location} eventtime={event.eventtime}/>
+            <EventCard key={event.id} title={event.title} location={event.location} eventdate={event.eventtime}/>
             )}
     </CardGroup>
     </div>
