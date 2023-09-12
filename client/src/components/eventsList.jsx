@@ -1,9 +1,11 @@
+//imports react hooks and 2 comps
 import { useState, useEffect } from "react";
-import EventCard from "./event";
+import EventCard from "./eventCard";
 import CardGroup from 'react-bootstrap/CardGroup';
 
 
-function Events() {
+function EventsList() {
+    //state for events
     const [events, setEvents] = useState([]);
 
     const getRequest = () => {
@@ -28,4 +30,4 @@ function Events() {
   );
 }
 
-export default Events;
+export default EventsList;

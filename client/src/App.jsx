@@ -1,11 +1,14 @@
+//import styles 
 import './App.css';
-import Events from './components/events';
+//import EventsList comp
+import EventsList from './components/eventsList';
 
 function App() {
   return (
     <div className="App">
-    <h1>Techtonica 2023 H2 events</h1>
-  <Events />
+    <h1>Eventonica</h1>
+    <p>Welcome to our Events website.  Here you can find a list of upcoming events!  Please feel free to add, delete and update events!</p>
+  <EventsList />
   </div>
 
   )
