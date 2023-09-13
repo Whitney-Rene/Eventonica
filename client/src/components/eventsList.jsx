@@ -30,6 +30,16 @@ function EventsList() {
       })
   }
 
+  // const handleDeletRequest = (data) => {
+  //   //can i leave it like ":id" ? or do I put data?
+  //   fetch("http://localhost:8080/api/events/:id", {
+  //     method: 'DELETE',
+  //     headers: { 'Content-Type': 'application/json'},
+  //     body: JSON.stringify(data)
+  //   })
+
+  // }
+
   //calls this function, when the page loads
   useEffect(() => { getRequest() }, []);
 
@@ -39,6 +49,7 @@ function EventsList() {
       <CardGroup className="Events">
         {events.map(event =>
           <EventCard key={event.id} title={event.title} location={event.location} eventdate={event.eventtime} />
+          // delete={handleDeleteRequest}
         )}
       </CardGroup>
     </div>

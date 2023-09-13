@@ -55,9 +55,17 @@ app.post('/api/events', async (req, res) => {
 
 });
 
+//my attempt:
+/* app.delete('/api/events/:id', async (req, res) =>{
+    try{
+        const { id } = req.params;
+        const result = await db.query (
+            DELETE FROM events WHERE id=6
+        )
 
-// app.delete('/api/events/:id', async (req, res) =>{
-//     //TODO - make this delete request work
-// }
+}
+ }
+*/
+
 
 app.listen(PORT, () => console.log(`Hola! Server running on Port http://localhost:${PORT}`));
