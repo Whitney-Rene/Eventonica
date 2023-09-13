@@ -4,6 +4,10 @@ import moment from 'moment';
 
 const EventCard = (props) => {
 
+    // const handleDelete = () => {
+    //     // TODO = Make this work
+    // }
+
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Body>
@@ -12,6 +16,7 @@ const EventCard = (props) => {
                 <Card.Text>
                     Location: {props.location}
                 </Card.Text>
+                <button>Delete</button>
             </Card.Body>
         </Card>
     )
