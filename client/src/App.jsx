@@ -9,7 +9,6 @@ function App() {
       <h1>Eventonica</h1>
       <p>Welcome to our Events website.  Here you can find a list of upcoming events!  Please feel free to add, delete and update events!</p>
       <EventsList />
-      <button>add Event</button>
     </div>
 
   )
