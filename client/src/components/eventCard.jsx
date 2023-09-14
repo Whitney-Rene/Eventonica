@@ -1,17 +1,32 @@
 import Card from 'react-bootstrap/Card';
-//library that converts/formats time
-import moment from 'moment';
-//im
+import moment from 'moment'; //imports library that converts/formats time
+import { confirmAlert } from 'react-confirm-alert'; //imports function to create an alert
+import 'react-confirm-alert/src/react-confirm-alert.css'; //imports the styling for that alert
 
 const EventCard = (props) => {
 
     const handleDelete = () => {
-        alert("Are you sure you want to delete this event?")
 
         const eventID = props.event.id;
-        props.delete(eventID);
+
+        confirmAlert({
+            title: 'Confirm to Delete Event',
+            message: `Are you sure you want to delete this event?: ${props.title}?`,
+            buttons: [
+              {
+                label: 'Yes',
+                onClick: () => props.delete(eventID)
+              },
+              {
+                label: 'No',
+                onClick: () => console.log('Click No')
+              }
+            ]
+          });
     
     }
+
+    
 
     return (
         <Card style={{ width: '18rem' }}>
