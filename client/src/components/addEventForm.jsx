@@ -2,11 +2,6 @@ import React, { useRef, useState } from 'react';
 
 export default function AddEvent (props) {
     
-    //adds state to reset input values
-    // const [title, setTitle] = useState('');
-    // const [location, setLocation] = useState('');
-    // const [date, setDate] = useState('');
-    
     const userTitle = useRef();
     const userLocation = useRef();
     const userDate = useRef();
@@ -16,10 +11,11 @@ export default function AddEvent (props) {
         const userEvent = {title: userTitle.current?.value, location: userLocation?.current.value, eventtime: userDate?.current.value}
         //console.log("Inside the component", userEvent);
         props.submit(userEvent);
+        
+        userTitle.current.value='';
+        userLocation.current.value='';
+        userDate.current.value='';
 
-        // setTitle('');
-        // setLocation('');
-        // setDate('');
     }
 
     return (
@@ -40,6 +36,7 @@ export default function AddEvent (props) {
             <button type="submit">Submit</button>
         </form>
             {/* <button>Cancel</button> */}
+            
         </>
     )
 }

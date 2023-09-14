@@ -21,3 +21,8 @@ form{
 label, input {
   display: block;
 }
+
+div.react-confirm-alert-body{
+  color: lightslategray;
+  background-color: lightcoral;
+}
