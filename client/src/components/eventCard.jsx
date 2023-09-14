@@ -26,7 +26,7 @@ const EventCard = (props) => {
     
     }
 
-    
+    //my assumption is that I will need to handle the put/edit here
 
     return (
         <Card style={{ width: '18rem' }}>

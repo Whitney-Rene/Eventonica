@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
     res.json("Hello Techtonica 2023 H2 to your Server for Eventonica");
 });
 
-
+//creates endpoint/route for all events
 app.get('/api/events', async (req, res) => {
 
     // //real connection with the DB eventonica
@@ -37,6 +37,8 @@ app.get('/api/events', async (req, res) => {
     }
 });
 
+//creates endpoint/route to post/add events
+//why is is the same route as above?
 app.post('/api/events', async (req, res) => {
     try {
         const { title, location, eventtime } = req.body;
@@ -55,7 +57,23 @@ app.post('/api/events', async (req, res) => {
 
 });
 
+//createa route/request to handle edits
+//MY ATTEMPT
+//app.post(/api/events/:id, async (req, res) => {
+// try {
+//     const id = req.params.id;
+//     const result = await db.query(
+    // (postsql command: UPDATE events SET title = 'Whitney-Rene''s Bday Celebration' WHERE id = 1;)
+//     )
+        //res.status(200).send('Event successfully deleted.')
+// }
+    // catch (error) {
+    //    console.log('Event does not exist')
+//}
+// })
 
+
+//creates endpoint/route to delete events
 app.delete('/api/events/:id', async (req, res) => {
     try {
         const id = req.params.id;

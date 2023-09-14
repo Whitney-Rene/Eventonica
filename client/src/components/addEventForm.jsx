@@ -9,7 +9,8 @@ export default function AddEvent (props) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const userEvent = {title: userTitle.current?.value, location: userLocation?.current.value, eventtime: userDate?.current.value}
-        //console.log("Inside the component", userEvent);
+        
+        //why didn't I need to import eventsList component?  because this is a child?
         props.submit(userEvent);
         
         userTitle.current.value='';
@@ -36,10 +37,10 @@ export default function AddEvent (props) {
             <button type="submit">Submit</button>
         </form>
             {/* <button>Cancel</button> */}
-            
+
         </>
     )
-}
+};
 
 // button {
 //     width: 15%; /* Button width is 50% of its containing element */

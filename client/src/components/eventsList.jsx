@@ -6,18 +6,23 @@ import CardGroup from 'react-bootstrap/CardGroup';
 
 
 function EventsList() {
+
   //state for events
   const [events, setEvents] = useState([]);
 
   //call api
   const getRequest = async () => {
+
     const response = await fetch('http://localhost:8080/api/events');
     const events = await response.json();
+
     setEvents(events);
-    console.log('Events fetched...', events);
-  }
+
+    // console.log('Events fetched...', events);
+  };
 
   const handlePostRequest = (data) => {
+
     fetch("http://localhost:8080/api/events", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -28,9 +33,11 @@ function EventsList() {
         console.log("Inside the post line 28", data)
         setEvents([...events, data])
       })
-  }
+
+  };
 
   const handleDeleteRequest = (eventIdToDelete) => {
+
     //can i leave it like ":id" ? or do I put eventIdToDelete?
     fetch(`http://localhost:8080/api/events/${eventIdToDelete}`, {
       method: 'DELETE',
@@ -42,13 +49,19 @@ function EventsList() {
       }
     })
 
-  }
+  };
 
   //calls this function, when the page loads
-  useEffect(() => { getRequest() }, []);
+  useEffect(() => { 
+
+    getRequest() 
+
+  }, []);
 
   return (
+
     <>
+
     <div>
       <CardGroup className="Events">
         {events.map(event =>
@@ -56,11 +69,14 @@ function EventsList() {
         )}
       </CardGroup>
     </div>
+
     <div>
       <AddEvent submit={handlePostRequest}/>
     </div>
+
     </>
-  );
-}
+
+  )
+};
 
 export default EventsList;
