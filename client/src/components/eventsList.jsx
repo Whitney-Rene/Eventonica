@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import EventCard from "./eventCard";
 import AddEvent from "./addEventForm";
 import CardGroup from 'react-bootstrap/CardGroup';
+import SearchBar from "./searchBar";
 
 
 function EventsList() {
@@ -21,6 +22,7 @@ function EventsList() {
     // console.log('Events fetched...', events);
   };
 
+  //missing error handling?
   const handlePostRequest = (data) => {
 
     fetch("http://localhost:8080/api/events", {
@@ -51,6 +53,14 @@ function EventsList() {
 
   };
 
+  const handleSearch = async (data) => {
+    console.log('data', data);
+    const response = await fetch(`http://localhost:8080/api/events?title=${data.search}`);
+    const events = await response.json();
+    setEvents(events);
+
+}
+
   //calls this function, when the page loads
   useEffect(() => { 
 
@@ -63,10 +73,11 @@ function EventsList() {
     <>
 
     <div>
+      <SearchBar handleSearch={handleSearch}/>
       <CardGroup className="Events">
-        {events.map(event =>
+        {events.length > 0 ? events.map(event =>
           <EventCard key={event.id} title={event.title} location={event.location} eventdate={event.eventtime} event={event} delete={handleDeleteRequest}/>
-        )}
+        ): <div>Found Nothing</div>}
       </CardGroup>
     </div>
 

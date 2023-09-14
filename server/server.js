@@ -23,17 +23,29 @@ app.get("/", (req, res) => {
 
 //creates endpoint/route for all events
 app.get('/api/events', async (req, res) => {
-
-    // //real connection with the DB eventonica
+    
+    ///api/events?title=test, creates variable so I can later filter by title 
+    const {title} = req.query;
+    // console.log(req.query);
+    //try is my promise 
     try {
+        if(title){
+        //server talking to database, please find any title with these search words
+        const { rows: events } = await db.query(`SELECT * FROM events WHERE title ILIKE '%${title}%'`); 
+        //sever talking to client, send back those events with search words
+        res.send(events); 
+        } 
+        //when user visit home link, show all events or when search bar is empty
+        else {
         const { rows: events } = await db.query('SELECT * FROM events');
-        console.log('In the server', events)
+        // console.log('In the server', events)
         res.send(events);
+        }
 
-    } catch (error) {
+    } //catch errors
+    catch (error) {
         console.log(error);
         return res.status(400).json({ error });
-
     }
 });
 
@@ -59,17 +71,20 @@ app.post('/api/events', async (req, res) => {
 
 //createa route/request to handle edits
 //MY ATTEMPT
-//app.post(/api/events/:id, async (req, res) => {
+// app.put('/api/events/:id', async (req, res) => {
 // try {
-//     const id = req.params.id;
+//     const { title, location, eventtime } = req.body;
 //     const result = await db.query(
-    // (postsql command: UPDATE events SET title = 'Whitney-Rene''s Bday Celebration' WHERE id = 1;)
+//     `UPDATE event SET title = ${title} WHERE id = ${ id }`
+//     //"INSERT INTO events (title, location, eventtime) VALUES ($1, $2, $3) RETURNING *",
+//     // [title, location, eventtime]
+//     // (postsql command: UPDATE events SET title = `${}` WHERE id = 1;)
 //     )
-        //res.status(200).send('Event successfully deleted.')
+//         res.status(200).send('Event successfully updated.')
 // }
-    // catch (error) {
-    //    console.log('Event does not exist')
-//}
+//     catch (error) {
+//        console.log('Event does not exist')
+// }
 // })
 
 
