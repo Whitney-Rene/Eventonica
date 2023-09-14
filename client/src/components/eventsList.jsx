@@ -30,15 +30,19 @@ function EventsList() {
       })
   }
 
-  // const handleDeletRequest = (data) => {
-  //   //can i leave it like ":id" ? or do I put data?
-  //   fetch("http://localhost:8080/api/events/:id", {
-  //     method: 'DELETE',
-  //     headers: { 'Content-Type': 'application/json'},
-  //     body: JSON.stringify(data)
-  //   })
+  const handleDeleteRequest = (eventIdToDelete) => {
+    //can i leave it like ":id" ? or do I put eventIdToDelete?
+    fetch(`http://localhost:8080/api/events/${eventIdToDelete}`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json'},
+    })
+    .then((response) => {
+      if(response.status === 200) {
+        getRequest();
+      }
+    })
 
-  // }
+  }
 
   //calls this function, when the page loads
   useEffect(() => { getRequest() }, []);
@@ -48,8 +52,7 @@ function EventsList() {
     <div>
       <CardGroup className="Events">
         {events.map(event =>
-          <EventCard key={event.id} title={event.title} location={event.location} eventdate={event.eventtime} />
-          // delete={handleDeleteRequest}
+          <EventCard key={event.id} title={event.title} location={event.location} eventdate={event.eventtime} event={event} delete={handleDeleteRequest}/>
         )}
       </CardGroup>
     </div>

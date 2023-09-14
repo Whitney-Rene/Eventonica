@@ -55,17 +55,20 @@ app.post('/api/events', async (req, res) => {
 
 });
 
-//my attempt:
-/* app.delete('/api/events/:id', async (req, res) =>{
-    try{
-        const { id } = req.params;
-        const result = await db.query (
-            DELETE FROM events WHERE id=6
-        )
 
-}
- }
-*/
+app.delete('/api/events/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const result = await db.query(
+            // id=id, id= req.params, id={id}??
+            `DELETE FROM events WHERE id=$1`, [id]
+        )
+        res.status(200).send('Event successfully deleted.')
+    } catch (error) {
+        console.log('Event does not exist')
+    }
+})
+
 
 
 app.listen(PORT, () => console.log(`Hola! Server running on Port http://localhost:${PORT}`));

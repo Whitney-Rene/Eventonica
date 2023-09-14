@@ -5,13 +5,11 @@ import moment from 'moment';
 
 const EventCard = (props) => {
 
+    const handleDelete = () => {
+        alert("Are you sure you want to delete this event?")
 
-    const handleDelete = (e) => {
-        e.preventDefault();
-        //how to grab event id?
-        // const eventID = {props.key};
-
-        // props.delete(eventID);
+        const eventID = props.event.id;
+        props.delete(eventID);
     
     }
 
