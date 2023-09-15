@@ -63,8 +63,9 @@ form input {
 background-color: rgb(239, 228, 208);
 }
 
-.searchbutton, .createEvButt {
+button {
   color: lightslategray;
+  font-family: cursive;
   /* background-color: lightyellow; */
 }
 
@@ -95,9 +96,9 @@ div.react-confirm-alert-body{
   color: rgb(212, 181, 122);
 }
 
-.deleteButton  {
+/* .deleteButton  {
   color: lightslategray;
-}
+} */
 
 /* .form {
   font-family: cursive;

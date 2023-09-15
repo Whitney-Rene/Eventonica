@@ -2,6 +2,7 @@
 import './App.css';
 //import EventsList comp
 import EventsList from './components/eventsList';
+import Practice from './components/ToDoForm';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <p className='para1'>Welcome to our Events website.  Here you can find a list of upcoming events!</p>
       <p className='para2'>Please feel free to add, delete and search for events!</p>
       <EventsList />
+      <Practice />
 
     </div>
 
