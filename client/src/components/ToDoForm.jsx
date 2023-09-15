@@ -33,7 +33,7 @@ function reducer(todos, action){
     }
         
     // return { count: state.count + 1};  simple example
-function Practice () {
+function TodoList () {
 
     const [todos, dispatch] = useReducer(reducer, []);
     const [name, setName ] = useState('');
@@ -60,4 +60,4 @@ function Practice () {
 
 }
 
-export default Practice;
+export default TodoList;
