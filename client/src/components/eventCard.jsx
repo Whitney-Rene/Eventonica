@@ -11,7 +11,7 @@ const EventCard = (props) => {
 
         confirmAlert({
             title: 'Confirm to Delete Event',
-            message: `Are you sure you want to delete this event?: ${props.title}?`,
+            message: `Are you sure you want to delete the ${props.title} event?`,
             buttons: [
               {
                 label: 'Yes',
@@ -29,14 +29,14 @@ const EventCard = (props) => {
     //my assumption is that I will need to handle the put/edit here
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card className="eachCard" style={{ width: '18rem' }}>
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Date: {!props.eventdate ? "TBD" : moment(props.eventdate).format('MMMM Do, YYYY')}</Card.Subtitle>
                 <Card.Text>
                     Location: {props.location}
                 </Card.Text>
-                <button onClick={handleDelete}>Delete</button>
+                <button className='deleteButton' onClick={handleDelete}>Delete</button>
             </Card.Body>
         </Card>
     )

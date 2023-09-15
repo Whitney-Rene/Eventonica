@@ -73,7 +73,9 @@ function EventsList() {
     <>
 
     <div>
+      <div className='search-bar-container'>
       <SearchBar handleSearch={handleSearch}/>
+      </div>
       <CardGroup className="Events">
         {events.length > 0 ? events.map(event =>
           <EventCard key={event.id} title={event.title} location={event.location} eventdate={event.eventtime} event={event} delete={handleDeleteRequest}/>

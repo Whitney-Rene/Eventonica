@@ -23,7 +23,7 @@ export default function AddEvent (props) {
 
         <>
         
-        <form onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit}>
         <h2>Create an Event Below</h2>
             <label>What is the title of your event?</label>
             <input type="text" name="title" required placeholder="Title of Event" ref={userTitle}/>
@@ -34,7 +34,7 @@ export default function AddEvent (props) {
             <label>What is the date of your event?</label>
             <input type="text" name="date" required placeholder="Date of Event" ref={userDate}/>
 
-            <button type="submit">Submit</button>
+            <button className='createEvButt' type="submit">Submit</button>
         </form>
             {/* <button>Cancel</button> */}
 

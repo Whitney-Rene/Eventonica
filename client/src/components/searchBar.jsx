@@ -17,11 +17,13 @@ function SearchBar (props) {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <label>Search for an event:</label>
-                <input type="text" name='search' placeholder="Search Here" ref={userSearch}/>
-                <button type="submit">Submit</button>
-            </form>
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <label>Search for an event:</label>
+                    <input type="text" name='search' placeholder="Search Here" ref={userSearch}/>
+                    <button className='searchbutton'type="submit">Submit</button>
+                </form>
+            </div>
         </>
     )
 

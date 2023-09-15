@@ -1,4 +1,3 @@
-//This is the minimal express server. 
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
