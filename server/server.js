@@ -49,7 +49,7 @@ app.get('/api/events', async (req, res) => {
 });
 
 //creates endpoint/route to post/add events
-//why is is the same route as above?
+//why can it be the same route as above?
 app.post('/api/events', async (req, res) => {
     try {
         const { title, location, eventtime } = req.body;
