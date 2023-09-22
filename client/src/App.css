@@ -9,11 +9,97 @@
   box-shadow: 1px, gray;
 }
 
-h1 {
-  color: #00556e;
-  margin-bottom: 50px !important;
+body {
+  background-image: url('https://stambrose.us/wp-content/uploads/2021/05/tina-witherspoon-9xEOFi3uGpM-unsplash.jpg');
+}
+
+h1{
+  color: lightslategrey;
+  /* margin-bottom: 50px !important; */
+  text-align: center;
+  font-family: cursive;
+}
+
+h2 {
+  color: rgb(111, 130, 149);
+  font-family: cursive;
+}
+
+.para1 {
+  text-align: center;
+  /* box-shadow: 12px 12px 2px 1px wheat; */
+  font-family: cursive;
+  margin-bottom: 0px;
+}
+
+.para2 {
+  text-align: center;
+  /* box-shadow: 12px 12px 2px 1px wheat; */
+  font-family: cursive;
+  margin-top: 0px;
 }
 
 form{
   margin-top: 50px;
+  font-family: cursive;
+
 }
+
+form input {
+    background-color: rgb(239, 228, 208);
+}
+
+.search-bar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-family: cursive;
+  color: lightslategrey;
+}
+
+.search-bar-container input {
+background-color: rgb(239, 228, 208);
+}
+
+button {
+  color: lightslategray;
+  font-family: cursive;
+  /* background-color: lightyellow; */
+}
+
+
+label, input {
+  display: block;
+}
+
+div.react-confirm-alert-body{
+  color: lightslategray;
+  background-color: wheat;
+  text-align: center;
+  font-family: cursive;
+}
+
+.react-confirm-alert-overlay{
+  background: lightslategray;
+}
+
+
+.react-confirm-alert-overlay  {
+  background: lightgray !important;
+}
+
+.eachCard {
+  background-color: whitesmoke;
+  font-family: cursive;
+  color: rgb(212, 181, 122);
+}
+
+/* .deleteButton  {
+  color: lightslategray;
+} */
+
+/* .form {
+  font-family: cursive;
+} */

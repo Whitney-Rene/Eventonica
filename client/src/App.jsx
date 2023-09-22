@@ -1,15 +1,25 @@
+//import styles 
 import './App.css';
-import Events from './components/events';
+//import EventsList comp
+import EventsList from './components/eventsList';
+import TodoList from './components/ToDoForm';
 
 function App() {
+
   return (
+
     <div className="App">
-    <h1>Techtonica 2023 H2 events</h1>
-  <Events />
-  </div>
+
+      <h1>Eventonica</h1>
+      <p className='para1'>Welcome to our Events website.  Here you can find a list of upcoming events!</p>
+      <p className='para2'>Please feel free to add, delete and search for events!</p>
+      <EventsList />
+      <TodoList />
+
+    </div>
 
   )
-  
-}
+
+};
 
 export default App
