@@ -41,10 +41,3 @@ export default function AddEvent (props) {
         </>
     )
 };
-
-// button {
-//     width: 15%; /* Button width is 50% of its containing element */
-//     position: fixed; /* Set the position to fixed to make it stay in one place */
-//     bottom: 20px; /* Adjust the distance from the bottom edge of the screen */
-//     right: 20px; /* Adjust the distance from the right edge of the screen */
-//   }

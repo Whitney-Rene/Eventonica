@@ -1,7 +1,7 @@
 import React from 'react';
 import {ACTIONS} from "./ToDoForm";
 
-function Todo({todo, dispatch}) {
+function ToDoButtons({todo, dispatch}) {
   return (
     <div>
         <span style={{color: todo.complete ? 'pink' : '#000'}}>
@@ -13,7 +13,7 @@ function Todo({todo, dispatch}) {
   )
 }
 
-export default Todo
+export default ToDoButtons
 
 //rfc shift = creates a function comnponent
 //ES7 React/Redux/GraphQL/React-Native snippets

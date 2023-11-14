@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import EventCard from "./eventCard";
 import AddEvent from "./addEventForm";
 import CardGroup from 'react-bootstrap/CardGroup';
-import SearchBar from "./searchBar";
+import SearchBar from "./SearchBar";
 
 
 function EventsList() {

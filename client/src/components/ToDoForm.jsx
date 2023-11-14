@@ -1,7 +1,7 @@
 //USEREDUCER PRACTICE
 
 import React, { useState, useReducer } from 'react';
-import Todo from './TodoButtons';
+import ToDoButtons from './ToDoButtons';
 
 export const ACTIONS = {
     ADD_TODO: 'add-todo',
@@ -33,7 +33,7 @@ function reducer(todos, action){
     }
         
     // return { count: state.count + 1};  simple example
-function TodoList () {
+function ToDoForm () {
 
     const [todos, dispatch] = useReducer(reducer, []);
     const [name, setName ] = useState('');
@@ -53,11 +53,11 @@ function TodoList () {
                 <input type='text' value={name} onChange={e => setName(e.target.value)}></input>
             </form>
            {todos.map(todo => {
-            return <Todo key={todo.id} todo={todo} dispatch={dispatch}/> 
+            return <ToDoButtons key={todo.id} todo={todo} dispatch={dispatch}/> 
            })} 
         </>
     )
 
 }
 
-export default TodoList;
+export default ToDoForm;

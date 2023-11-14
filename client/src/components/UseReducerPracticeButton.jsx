@@ -15,7 +15,7 @@ function reducer(state, action){
         
     // return { count: state.count + 1};  simple example
 }
-function Button () {
+function UseReducerPracticeButton () {
     //manage state with useState and useReducer=handle complex state
     //will normally use an object, bc the state is more complex
     const [state, dispatch] = useReducer(reducer, { count: 0})
@@ -40,4 +40,4 @@ function Button () {
 
 }
 
-export default Button;
+export default UseReducerPracticeButton;
