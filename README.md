@@ -1,42 +1,32 @@
-# Quick-setup 
+# Eventonica Application
 
-#### Once you have successfully setup this template and initial database, the view will look like this:
+### Project Description:
 
-![Initial View of the project](https://raw.githubusercontent.com/Yosolita1978/screenshoots/50a5573f21c1265d20d838a36b98588f9b4eefce/2023/H1/Screen%20Shot%202023-03-09%20at%208.03.32%20PM.png)
-### Your First Express and React App with a DB connection
+This Eventonica Application will allow th user to view, search for, delete and create events!  There is also a section to that allows the user to create a to-do list and toggle and delete the to-do items.
 
-1. Go to your source directory in your terminal and run the command `git clone https://github.com/Yosolita1978/2023EventonicaTemplate.git <NAMENEWDIRECTORY>`
-![You will see something like this in your terminal.]
+### Install Project 
 
-> <img width="768" alt="Screen Shot 2023-03-10 at 11 10 34 AM" src="https://user-images.githubusercontent.com/102179075/224608432-5e3d18bd-7cf5-4576-8b3f-2e903106abe1.png">
+If you are interested in installing and running this project on your local computer, follow the steps below:
 
-2. To clean your folder from the owner's git, run the command `rm -rf .git` inside the folder <NAMENEWDIRECTORY>. Then re-initialize as the owner with `git init`.
+* Go to your project directory in your terminal and run the command ***git clone git@github.com:Whitney-Rene/Eventonica.git NAMENEWDIRECTORY***
 
-3. Go to the server folder in the project (`cd server`) and run the command `npm install`
+* To remove the source code git out of the project directory, run the command ***rm -rf .git***
 
-4. Go to the client folder (`cd .. and cd client`) and run the command `npm install`
+* Then while still within the project directory in your terminal, run the command ***git init*** to start your own git track
 
-5. This template has two servers already working. Both servers should start simultaneously, or "concurrently", by running `npm run dev` from within the server directory in your terminal. Please note that your backend server will run from port 8080, and your frontend React server will run from port 3000 .
+* In the terminal, go to the server directory ***cd server*** and run the command ***npm run dev***. This will start the server in both your server directory and your client directory concurrently.
 
-6. To add a Postgres DB - you will need another terminal window for this part
+### How to Use the Project
 
-6.1 Inside your server directory create a `.env` file and copy there the values that are in `.envexample`
+The project will look like this on the client side:
 
-* In a different terminal window go to the psql terminal with the comand `psql`
-* Inside the psql prompt create your database eventonica with the command `create database eventonica;` (don't forget the semicolon!)
+![Eventonica App-preview](<Screenshot 2023-11-14 at 12.52.42 PM.png>)
 
-![You will see something like this](https://raw.githubusercontent.com/Yosolita1978/screenshoots/b6b7e47b8ccda4b9f709d20e94cacb6506d4dc13/2023/H1/Screen%20Shot%202023-03-13%20at%2011.13.13%20AM.png)
+### Developer Contact
 
-Back in the terminal window with the project go inside the server directory and run the command `psql -d eventonica -f db.sql` that will create a table `events` with 5 rows inside your db eventonica. 
-![This will be the result of that command](https://raw.githubusercontent.com/Yosolita1978/screenshoots/b6b7e47b8ccda4b9f709d20e94cacb6506d4dc13/2023/H1/Screen%20Shot%202023-03-13%20at%2011.12.29%20AM.png)
+Hi, I am Whitney-Rene.  I am a full stack engineer in a 6 month bootcamp called Techtonica.
 
-Your DB should look like this inside the psql terminal
-![Your DB should look like this](https://raw.githubusercontent.com/Yosolita1978/screenshoots/696689a627eb5ca206b5a2eaebec7cc1efa15ffc/2023/H1/Screen%20Shot%202023-03-09%20at%208.25.54%20PM.png)
-
-# Links that you will need
-
-* The instructions for [pg](https://node-postgres.com/apis/pool)  
-* Setup [postgres correctly](https://github.com/Techtonica/curriculum/blob/main/databases/installing-postgresql.md).
+You can find me on LinkedIn here: https://www.linkedin.com/in/whitney-rene-chambers/ .
 
 
 
