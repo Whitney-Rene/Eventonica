@@ -96,6 +96,9 @@ div.react-confirm-alert-body{
   color: rgb(212, 181, 122);
 }
 
+.success-message {
+  font-family: cursive;
+}
 /* .deleteButton  {
   color: lightslategray;
 } */

@@ -5,6 +5,7 @@ export default function AddEvent (props) {
     const userTitle = useRef();
     const userLocation = useRef();
     const userDate = useRef();
+    const [confirmEventCreation, setConfirmEventCreation] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,6 +17,7 @@ export default function AddEvent (props) {
         userTitle.current.value='';
         userLocation.current.value='';
         userDate.current.value='';
+        setConfirmEventCreation(true);
 
     }
 
@@ -37,6 +39,8 @@ export default function AddEvent (props) {
             <button className='createEvButt' type="submit">Submit</button>
         </form>
             {/* <button>Cancel</button> */}
+
+        {confirmEventCreation && <p className='success-message'>your event has been successfully created</p>}
 
         </>
     )

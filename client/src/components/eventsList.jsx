@@ -1,7 +1,7 @@
 //imports react hooks and 2 comps
 import { useState, useEffect } from "react";
 import EventCard from "./eventCard";
-import AddEvent from "./addEventForm";
+import AddEvent from "./AddEvent";
 import CardGroup from 'react-bootstrap/CardGroup';
 import SearchBar from "./SearchBar";
 

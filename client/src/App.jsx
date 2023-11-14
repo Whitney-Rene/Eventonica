@@ -1,7 +1,7 @@
 //import styles 
 import './App.css';
 //import EventsList comp
-import EventsList from './components/eventsList';
+import EventsList from './components/EventsList';
 import TodoForm from './components/ToDoForm';
 
 function App() {
